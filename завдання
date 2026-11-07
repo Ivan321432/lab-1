@@ -1,0 +1,24 @@
+def calculate_x(a, b):
+  """Функція обчислює значення X залежно від значень a та b."""
+  if a > b:
+    return 2 * a + b
+  elif a == b:
+    return -2
+  else:
+    return (a - 5) / b
+def main():
+  print("Завдання 1: Обчислення значення X")
+  while True:
+    try:
+      a = float(input("Введіть число a (від 1 до 100): "))
+      b = float(input("Введіть число b (від 1 до 100): "))
+      if 1 <= a <= 100 and 1 <= b <= 100:
+        break
+      else:
+        print("Помилка! Числа повинні належати діапазону від 1 до 100.")
+    except ValueError:
+      print("Помилка! Будь ласка, введіть числове значення.")
+  x = calculate_x(a, b)
+  print(f"Результат: X = {x}")
+if __name__ == "__main__":
+  main()
