@@ -1,0 +1,13 @@
+def generate_line():
+  """Виводить на екран лінію з 20 символів '*', замінюючи кожен третій на '?'."""
+  print("\n--- Генерація рядка із символів ---")
+  line = []
+  for i in range(1, 21): 
+    if i % 3 == 0:
+      line.append("?")
+    else:
+      line.append("*")
+
+  result_string = "".join(line)
+  print(f"Отриманий рядок (довжина {len(result_string)}):")
+  print(result_string)
