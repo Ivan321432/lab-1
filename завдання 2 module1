@@ -1,0 +1,18 @@
+import math
+def calculate_expression():
+  """Обчислює значення виразу y = sin^2(x) + cos^2(x) для заданого x."""
+  print("\n--- Обчислення виразу y = sin^2(x) + cos^2(x) ---")
+  try:
+    x_deg = float(input("Введіть значення кута x (у градусах): "))
+    x_rad = math.radians(x_deg)
+
+    sin_val = math.sin(x_rad)
+    cos_val = math.cos(x_rad)
+
+    y = (sin_val**2) + (cos_val**2)
+
+    print(f"Для x = {x_deg}°:")
+    print(f"sin(x) = {sin_val:.4f}, cos(x) = {cos_val:.4f}")
+    print(f"Результат: y = {y:.4f} (теоретично дорівнює 1)")
+  except ValueError:
+    print("Помилка! Будь ласка, введіть числове значення.")
